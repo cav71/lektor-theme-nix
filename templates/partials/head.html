@@ -34,6 +34,7 @@ ga('create', '{{ config.THEME_SETTINGS.googleanalytics }}', 'auto');
     ga('send', 'pageview');
 
 </script>
+{% endif %}
 
 <!-- AUTO RELOAD -->
 <script>
@@ -56,4 +57,3 @@ ga('create', '{{ config.THEME_SETTINGS.googleanalytics }}', 'auto');
     setInterval(refresh, 2000);
   });
 </script>
-{% endif %}
