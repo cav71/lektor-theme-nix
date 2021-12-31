@@ -34,4 +34,26 @@ ga('create', '{{ config.THEME_SETTINGS.googleanalytics }}', 'auto');
     ga('send', 'pageview');
 
 </script>
+
+<!-- AUTO RELOAD -->
+<script>
+  function refresh() {
+    $.ajax(document.documentURI, {
+      success : function(data, textStatus, jqXHR){ 
+                  let newMtime = parseFloat(jqXHR.getResponseHeader("x-mtime"));
+                  if (_refresh_status === null) {
+                    _refresh_status = newMtime;
+                  } else if(_refresh_status !== newMtime)
+                  {
+                    document.location.reload();
+                  }
+      }
+    });
+  };
+
+  $(document).ready(function(){
+    _refresh_status = null;
+    setInterval(refresh, 2000);
+  });
+</script>
 {% endif %}
