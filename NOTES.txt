@@ -1,5 +1,9 @@
 ## Jijna
 
+{{site}}
+{{config is site.config}}
 {{config.PROJECT.pyver}}
+{{config.THEME_SETTINGS}}
 {% debug %}
+{% for page in site.query('/')  %}
 

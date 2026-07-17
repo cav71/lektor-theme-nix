@@ -9,15 +9,21 @@
 
 body {
       /* background-color: var(--nix-bg); */
-      color: var(--nix-fg);
+      color: black;
       font-family: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
 }
 
+pre:has(code) {
+    background-color: rgb(245, 245, 245);
+    padding: 9.5px;
+}
+
 h1 {
     color: black;
+    font-weight: bold;
 }
 
     /* --- Navbar --- */
