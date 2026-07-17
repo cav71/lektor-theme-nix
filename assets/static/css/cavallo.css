@@ -1,0 +1,83 @@
+:root {
+  --nix-bg: #1d1f21;
+  --nix-fg: #c5c8c6;
+  --nix-muted: #969896;
+  --nix-green: #8ae234;
+  --nix-navbar: #161719;
+  --nix-border: #2c2f33;
+}
+
+body {
+      /* background-color: var(--nix-bg); */
+      color: var(--nix-fg);
+      font-family: "SFMono-Regular", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+h1 {
+    color: black;
+}
+
+    /* --- Navbar --- */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    .navbar-nix {
+      background-color: var(--nix-navbar);
+      border-bottom: 1px solid var(--nix-border);
+    }
+
+    .navbar-nix .navbar-brand {
+      color: var(--nix-green);
+      font-weight: 600;
+    }
+    .navbar-nix .nav-link {
+      color: var(--nix-fg);
+    }
+    .navbar-nix .nav-link:hover,
+    .navbar-nix .nav-link:focus {
+      color: var(--nix-green);
+    }
+
+    .navbar-nix .navbar-nav {
+        font-size: 1.2em;
+    }
+    /* --- End Navbar --- */
+
+    /* --- Content --- */
+    .wrapper { flex: 1 0 auto; }
+
+    a { color: var(--nix-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .hero h1 { font-weight: 700; }
+    .hero .lead { color: var(--nix-muted); }
+
+    .feature {
+      border-top: 1px solid var(--nix-border);
+      padding: 2rem 0;
+    }
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--nix-green);
+      line-height: 1;
+    }
+    .feature h2 { font-size: 1.4rem; }
+    .feature p { color: var(--nix-muted); margin-bottom: 0; }
+    /* --- End Content --- */
+
+    /* --- Footer --- */
+    .footer {
+      flex-shrink: 0;
+      background-color: #F5F5F5;
+      border-top: 1px solid var(--nix-border);
+      color: var(--nix-muted);
+      font-size: 0.85rem;
+      padding: 1.25rem 0;
+    }
+    /* --- End Footer --- */
+
+

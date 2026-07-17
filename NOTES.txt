@@ -1,0 +1,5 @@
+## Jijna
+
+{{config.PROJECT.pyver}}
+{% debug %}
+
