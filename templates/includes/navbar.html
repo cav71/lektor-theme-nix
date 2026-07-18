@@ -1,17 +1,11 @@
-<nav class="navbar navbar-nix navbar-expand-md navbar-cav sticky-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top" id="mainNav">
+  <div class="container-fluid navbar-cav">
     <a class="navbar-brand" href="/">Home</a>
 
-    <button class="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="nixNav">
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         {% for page in site.query('/') | porder(before=['pages', 'blog'], after=['about'])  %}
         <li class="nav-item">

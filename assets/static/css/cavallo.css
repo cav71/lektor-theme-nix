@@ -16,6 +16,8 @@ body {
       min-height: 100vh;
 }
 
+.wrapper { flex: 1 0 auto; }
+
 pre:has(code) {
     background-color: rgb(245, 245, 245);
     padding: 9.5px;
@@ -26,7 +28,64 @@ h1 {
     font-weight: bold;
 }
 
-    /* --- Navbar --- */
+/* --- Navbar --- */
+    .navbar > div {
+      background-color: var(--nix-navbar);
+      border-bottom: 7px solid grey;
+      animation: fadeOnScroll linear;
+      animation-timeline: scroll(root);
+      animation-range: 0px 200px; /* fully faded by 300px of scroll */
+      animation-fill-mode: both;
+    }
+
+    @keyframes fadeOnScroll {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+
+    .navbar .navbar-brand {
+      color: var(--nix-green);
+      font-weight: 600;
+    }
+
+    .navbar .nav-link {
+      color: var(--nix-fg);
+    }
+
+    .navbar .nav-link:hover, .nav-link:focus {
+      color: var(--nix-green);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+/* --- End Navbar --- */
+
+/* --- Footer --- */
+footer {
+    flex-shrink: 0;
+    background-color: #F5F5F5;
+    border-top: 1px solid var(--nix-border);
+    color: var(--nix-muted);
+    font-size: 0.85rem;
+    padding: 0.25rem 0;
+}
+/* --- End Footer --- */
+
+
+/* NOTHING BELOW!!!
+     --- Navbar ---
+    .navbar {
+        position: relative;
+        z-index: 9999;
+    }
+    .navbar-toggler {
+        cursor: pointer;
+    }
+    .navbar-collapse {
+        flex-basis: 100%;
+    }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
@@ -51,9 +110,9 @@ h1 {
     .navbar-nix .navbar-nav {
         font-size: 1.2em;
     }
-    /* --- End Navbar --- */
+    --- End Navbar ---
 
-    /* --- Content --- */
+    --- Content ---
     .wrapper { flex: 1 0 auto; }
 
     a { color: var(--nix-green); text-decoration: none; }
@@ -73,17 +132,8 @@ h1 {
     }
     .feature h2 { font-size: 1.4rem; }
     .feature p { color: var(--nix-muted); margin-bottom: 0; }
-    /* --- End Content --- */
+     --- End Content ---
 
-    /* --- Footer --- */
-    .footer {
-      flex-shrink: 0;
-      background-color: #F5F5F5;
-      border-top: 1px solid var(--nix-border);
-      color: var(--nix-muted);
-      font-size: 0.85rem;
-      padding: 1.25rem 0;
-    }
-    /* --- End Footer --- */
+*/
 
 
